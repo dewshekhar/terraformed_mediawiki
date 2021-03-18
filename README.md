@@ -94,5 +94,5 @@ ssh-keygen -m PEM -t rsa -b 2048 -f mediawiki
 ```
 **Issue:**
 ```
-1. We were getting issue with AMI which I used for initial setup as presently It is not available so used the data element instead of hasrcoding.
+1. We were getting issue with AMI which I used for initial setup as presently It is not available so used the data element instead of hardcoding.
 ```
