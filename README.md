@@ -28,7 +28,7 @@ export AWS_SECRET_ACCESS_KEY=XXXXXXXXXXXXX
 ```bash
 ssh-keygen -m PEM -t rsa -b 2048 -f mediawiki
 ```
-3. Keep the private key with you and place the .pub key in the code lets ksay keep it at > ![](/files/key_pairs/mediawiki.pub)
+3. Keep the private key with you and place the .pub key in the code lets ksay keep it at /files/key_pairs/mediawiki.pub
 4. Run `Terraform init` for initialization 
 
 > ![](/files/readme_snips/init.PNG)
@@ -48,7 +48,7 @@ ssh-keygen -m PEM -t rsa -b 2048 -f mediawiki
 7. Wait till your resources be created.
 
 
-8. Once resources gets created use the `endpoint` provided by apply command to access the mediawiki home page for installation
+8. Once resources gets created use the `endpoint` to access the mediawiki home page for installation
 
 > ![](/files/readme_snips/strings.PNG)
 
@@ -94,5 +94,5 @@ ssh-keygen -m PEM -t rsa -b 2048 -f mediawiki
 ```
 **Issue:**
 ```
-1. Were getting issue with AMI which I used for initial setup as presently It is not available so used the data element instead of hasrcoding.
+1. We were getting issue with AMI which I used for initial setup as presently It is not available so used the data element instead of hasrcoding.
 ```
