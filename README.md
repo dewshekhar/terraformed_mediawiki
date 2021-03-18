@@ -28,7 +28,7 @@ export AWS_SECRET_ACCESS_KEY=XXXXXXXXXXXXX
 ```bash
 ssh-keygen -m PEM -t rsa -b 2048 -f mediawiki
 ```
-3. Keep the private key with you and place the .pub key in the code lets ksay keep it at /files/key_pairs/mediawiki.pub
+3. Keep the private key with you and place the .pub key in the code. Lets keep it at /files/key_pairs/mediawiki.pub
 4. Clone the [repo] (https://github.com/dewshekhar/terraformed_mediawiki.git) and then Run `Terraform init` for initialization 
 
 > ![](/files/readme_snips/init.PNG)
