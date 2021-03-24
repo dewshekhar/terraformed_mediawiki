@@ -6,21 +6,21 @@ resource "aws_security_group" "sg" {
   description = "Security Group For MEDIAWIKI Web Server"
   vpc_id      = module.aws_core_infra.vpc_id
   tags = {
-    Name       = "${local.app_name}-WEB-SERVER-SG"
+    Name = "${local.app_name}-WEB-SERVER-SG"
   }
   ingress {
-    description = "Allow 80 port from lb"
-    from_port   = 80
-    to_port     = 80
-    protocol    = "tcp"
-    security_groups = [ aws_security_group.lb_sg.id ]
+    description     = "Allow 80 port from lb"
+    from_port       = 80
+    to_port         = 80
+    protocol        = "tcp"
+    security_groups = [aws_security_group.lb_sg.id]
   }
   ingress {
     description = "Allow ssh"
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = [ local.vpc_cidr ]
+    cidr_blocks = [local.vpc_cidr]
   }
   egress {
     from_port   = 0
@@ -40,7 +40,7 @@ resource "aws_security_group" "lb_sg" {
     Name = "${local.app_name}-ALB-SG"
   }
   ingress {
-   from_port   = 80
+    from_port   = 80
     to_port     = 80
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]

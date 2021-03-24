@@ -11,7 +11,7 @@ yum install php php-{pear,cgi,common,curl,mbstring,gd,mysqlnd,gettext,bcmath,jso
 systemctl restart httpd.service ; systemctl enable httpd.service
 systemctl start mariadb ; systemctl enable mariadb
 
-mysql -u root -e "CREATE USER 'wiki'@'localhost' IDENTIFIED BY 'admin@passmedia123';"
+mysql -u root -e "CREATE USER 'wiki'@'localhost' IDENTIFIED BY '${password}';"
 mysql -u root -e "CREATE DATABASE wikidatabase;"
 mysql -u root -e "GRANT ALL PRIVILEGES ON wikidatabase.* TO 'wiki'@'localhost';"
 mysql -u root -e "FLUSH PRIVILEGES;"
