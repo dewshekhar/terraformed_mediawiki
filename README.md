@@ -50,7 +50,7 @@ ssh-keygen -m PEM -t rsa -b 2048 -f mediawiki
 
 8. Once resources gets created use the `endpoint` to access the mediawiki home page for installation
 
-> ![](/files/readme_snips/strings.PNG)
+
 
 9. Select the language
 
